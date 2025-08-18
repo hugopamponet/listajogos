@@ -16,46 +16,36 @@ public class Game {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	@Column(name = "title")
 	private String title;
 	
 	@Column(name = "game_year")
 	private Integer year;
-	
-	@Column(name = "genre")
 	private String genre;
-	
-	@Column(name = "platform")
-	private String platform;
-	
-	@Column(name = "score")
+	private String platforms;
 	private double score;
-	
-	@Column(name = "imgUrl")
 	private String imgUrl;
 	
-	@Column(name = "shortDesciption")
-	private String shortDesciption;
+	@Column(columnDefinition = "TEXT")
+	private String shortDescription;
 	
-	@Column(name = "longDesciption")
-	private String longDesciption;
+	@Column(columnDefinition = "TEXT")
+	private String longDescription;
 	
 	public Game () {
 		
 	}
 
-	public Game(Long id, String title, Integer year, String genre, String platform, double score, String imgUrl,
-			String shortDesciption, String longDesciption) {
+	public Game(Long id, String title, Integer year, String genre, String platforms, double score, String imgUrl,
+			String shortDescription, String longDescription) {
 		this.id = id;
 		this.title = title;
 		this.year = year;
 		this.genre = genre;
-		this.platform = platform;
+		this.platforms = platforms;
 		this.score = score;
 		this.imgUrl = imgUrl;
-		this.shortDesciption = shortDesciption;
-		this.longDesciption = longDesciption;
+		this.shortDescription = shortDescription;
+		this.longDescription = longDescription;
 	}
 
 	public Long getId() {
@@ -91,11 +81,11 @@ public class Game {
 	}
 
 	public String getPlatform() {
-		return platform;
+		return platforms;
 	}
 
 	public void setPlatform(String platform) {
-		this.platform = platform;
+		this.platforms = platform;
 	}
 
 	public double getScore() {
@@ -115,19 +105,19 @@ public class Game {
 	}
 
 	public String getShortDesciption() {
-		return shortDesciption;
+		return shortDescription;
 	}
 
 	public void setShortDesciption(String shortDesciption) {
-		this.shortDesciption = shortDesciption;
+		this.shortDescription = shortDesciption;
 	}
 
 	public String getLongDesciption() {
-		return longDesciption;
+		return longDescription;
 	}
 
 	public void setLongDesciption(String longDesciption) {
-		this.longDesciption = longDesciption;
+		this.longDescription = longDesciption;
 	}
 
 	@Override
