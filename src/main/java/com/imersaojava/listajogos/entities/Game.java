@@ -104,15 +104,15 @@ public class Game {
 		this.imgUrl = imgUrl;
 	}
 
-	public String getShortDesciption() {
+	public String getShortDescription() {
 		return shortDescription;
 	}
 
-	public void setShortDesciption(String shortDesciption) {
-		this.shortDescription = shortDesciption;
+	public void setShortDescription(String shortDescription) {
+		this.shortDescription = shortDescription;
 	}
 
-	public String getLongDesciption() {
+	public String getLongDescription() {
 		return longDescription;
 	}
 

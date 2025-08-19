@@ -1,6 +1,7 @@
 package com.imersaojava.listajogos.DTO;
 
 import com.imersaojava.listajogos.entities.Game;
+import com.imersaojava.listajogos.projections.GameMinProjection;
 
 public class GameMinDTO {
 	
@@ -19,7 +20,16 @@ public class GameMinDTO {
 		title = entity.getTitle();
 		year = entity.getYear();
 		imgUrl = entity.getImgUrl();
-		shortDescription = entity.getShortDesciption();
+		shortDescription = entity.getShortDescription();
+	}
+	
+	public GameMinDTO(GameMinProjection projection) {
+
+		id = projection.getId();
+		title = projection.getTitle();
+		year = projection.getYear();
+		imgUrl = projection.getImgUrl();
+		shortDescription = projection.getShortDescription();
 	}
 
 	public Long getId() {
